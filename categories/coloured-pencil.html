@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloured Pencil Artwork - Caroline J Hill</title>
+    <link rel="stylesheet" href="../assets/style.css"> <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles for category artwork grid - can be moved to style.css */
+        /* These styles are assumed to be in assets/style.css or can be copied there */
+        .artwork-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for artworks */
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .artwork-item {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden; /* To ensure image corners are rounded with the item */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .artwork-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .artwork-item img {
+            width: 100%;
+            height: 280px; /* Adjust height as needed for artwork display */
+            object-fit: contain; /* 'contain' to show full artwork, 'cover' to fill (might crop) */
+            background-color: #f8f9fa; /* Fallback for transparent parts or if 'contain' leaves space */
+            display: block;
+        }
+        .artwork-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .artwork-info h4 { /* Title of the artwork */
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .artwork-info p { /* Optional: Dimensions, year, etc. */
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 0;
+        }
+        .back-to-gallery-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-to-gallery-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="site-branding">
+                <h1 class="site-title"><a href="../index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1>
+                <p class="site-tagline">Sketching daily</p>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li> 
+                    <li><a href="../gallery.html" class="active">Gallery</a></li> 
+                    <li><a href="../artist.html">Artist</a></li> 
+                    <li><a href="../blog.html">Blog</a></li> 
+                    <li><a href="../contact.html">Contact</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section" style="background-color: #f0f2f5; padding: 40px 0; text-align: center;">
+            <div class="container">
+                <h2 style="color: #2c3e50; font-size: 2.5em;">Coloured Pencil Artwork</h2>
+                <p style="color: #555; font-size: 1.1em; margin-top: 10px;">A vibrant collection of pieces created using coloured pencils.</p>
+            </div>
+        </section>
+
+        <section class="category-artwork-section" style="padding: 50px 0;">
+            <div class="container">
+                <a href="../gallery.html" class="back-to-gallery-link">&larr; Back to Main Gallery</a>
+
+                <div class="artwork-grid">
+                    <div class="artwork-item">
+                        <a href="#"> <img src="../assets/images/artwork/coloured-pencil/cp-artwork-1.jpg" alt="Coloured Pencil Piece 1">
+                            </a>
+                        <div class="artwork-info">
+                            <h4>Vibrant Flower Study</h4>
+                            <p>Coloured Pencil on Bristol Board, 2024</p> 
+                        </div>
+                    </div>
+
+                    <div class="artwork-item">
+                        <a href="#">
+                            <img src="../assets/images/artwork/coloured-pencil/cp-artwork-2.jpg" alt="Coloured Pencil Piece 2">
+                        </a>
+                        <div class="artwork-info">
+                            <h4>Detailed Animal Portrait</h4>
+                            <p>Polychromos on Toned Paper</p>
+                        </div>
+                    </div>
+
+                    <div class="artwork-item">
+                        <a href="#">
+                            <img src="../assets/images/artwork/coloured-pencil/cp-artwork-3.jpg" alt="Coloured Pencil Piece 3">
+                        </a>
+                        <div class="artwork-info">
+                            <h4>Fantasy Illustration</h4>
+                            <p>Mixed Coloured Pencils</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Example:
+                    <div class="artwork-item">
+                        <a href="#">
+                            <img src="../assets/images/artwork/coloured-pencil/cp-artwork-4.jpg" alt="Coloured Pencil Piece 4">
+                        </a>
+                        <div class="artwork-info">
+                            <h4>Artwork Title 4</h4>
+                            <p>Details...</p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-columns">
+        <div class="container footer-columns-container">
+            <div class="footer-column">
+                <h3>THE ARTIST</h3>
+                <p>A brief introduction to the artist. Explore more about their journey and inspiration.</p>
+                <a href="../artist.html" class="footer-link">Read More ></a>
+            </div>
+            <div class="footer-column">
+                <h3>CONNECT</h3>
+                <ul class="social-media-links">
+                    <li><a href="https://www.instagram.com/carolinehill3482/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="mailto:email@example.com">Email Artist</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>JOIN MY MAILING LIST</h3>
+                <form class="mailing-list-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-subscribe">Subscribe ></button>
+                </form>
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> Caroline J Hill. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

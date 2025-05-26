@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist Name - Art Portfolio</title>
+    <title>Home - Caroline J Hill</title>
     <link rel="stylesheet" href="assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -12,15 +12,15 @@
     <header class="site-header">
         <div class="container header-container">
             <div class="site-branding">
-                <h1 class="site-title">Caroline J Hill</h1>
-                <p class="site-tagline">Sketching daily</p>
+                <h1 class="site-title"><a href="index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1>
+                <p class="site-tagline">Sketching daily</p> 
             </div>
             <nav class="main-navigation">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="artist.html">Artist</a></li>
-                    <li><a href="blog.html">Blog</a></li> 
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -29,17 +29,33 @@
 
     <main id="home">
         <section class="hero-section">
-            <div class="hero-slide active" style="background-image: url('assets/images/hero1.jpeg');"></div>
-            <div class="hero-slide" style="background-image: url('assets/images/hero2.jpeg');"></div>
-            <div class="hero-overlay-content container">
-                <div class="hero-main-title">
-                    <h2>MAIN ARTWORK TITLE</h2> <p>Brief description or series name</p>
+            <div class="hero-slide active" 
+                 style="background-image: url('assets/images/hero1.jpeg');"
+                 data-title="Norfolk Skys"
+                 data-link="#"> </div>
+            <div class="hero-slide" 
+                 style="background-image: url('assets/images/hero2.jpeg');"
+                 data-title="Garden Chair"
+                 data-link="#"> </div>
+            <!-- Add more slides here if needed, e.g., 
+            <div class="hero-slide" 
+                 style="background-image: url('assets/images/hero3.jpeg');"
+                 data-title="Another Creation"
+                 data-link="#">
+            </div> 
+            -->
+
+            <div class="hero-overlay-content-wrapper container"> <div class="hero-overlay-content">
+                    <div class="hero-main-title">
+                        <h2 id="heroSlideTitle">MAIN ARTWORK TITLE</h2>
+                    </div>
+                    <a href="#" id="heroSlideLink" class="btn btn-view-hero">View Details</a>
                 </div>
-                <a href="#" class="btn btn-view-hero">View Details</a>
             </div>
+
             <div class="hero-main-text-overlay">
-                <h1>Art Showcase</h1>
-                <p>my portfolio</p>
+                <h1>Art Showcase</h1> 
+                <p>Sketching daily</p>
             </div>
             <div class="hero-slider-dots">
                 </div>
@@ -48,13 +64,13 @@
         <section class="featured-images-grid">
             <div class="container grid-container">
                 <div class="grid-item">
-                    <img src="assets/images/snowboarder1.jpeg" alt="Featured Artwork 1">
+                    <img src="assets/images/snowboarder1.jpeg" alt="Featured Artwork 1"> 
                 </div>
                 <div class="grid-item">
-                    <img src="assets/images/lamb1.jpeg" alt="Featured Artwork 2">
+                    <img src="assets/images/lamb1.jpeg" alt="Featured Artwork 2"> 
                 </div>
                 <div class="grid-item">
-                    <img src="assets/images/dog1.jpeg" alt="Featured Artwork 3">
+                    <img src="assets/images/dog1.jpeg" alt="Featured Artwork 3"> 
                 </div>
             </div>
         </section>
@@ -62,30 +78,47 @@
         <section class="cta-gallery-section">
             <div class="container text-center">
                 <h2>GALLERY</h2>
-                <a href="portfolio.html" class="btn btn-secondary">View Gallery></a>
+                <p style="font-size: 1.1em; color: #555; margin-top: 10px; margin-bottom: 20px;">Have a look at my work!</p>
+                <a href="gallery.html" class="btn btn-secondary">View Gallery ></a>
             </div>
         </section>
 
         <section id="artist-bio" class="artist-bio-section">
             <div class="container">
                 <h2 class="section-title">About The Artist</h2>
+                <img src="assets/images/artist1.jpg" alt="Photo of Caroline J Hill" style="display: block; margin: 0 auto 20px auto; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <p>Detailed artist biography will go here. This section is linked from the 'Artist' navigation item. Customize this content with the artist's story, inspiration, and background.</p>
             </div>
         </section>
-    </main>
+
+        <section class="blog-teaser-section" style="padding: 50px 0; background-color: #f9f9f9;">
+            <div class="container text-center">
+                <h2 class="section-title" style="color: #2c3e50; margin-bottom: 40px;">From the Studio: Latest Blog Post</h2>
+                <div class="latest-blog-post-preview" style="max-width: 700px; margin: 0 auto 30px auto; background-color: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left;">
+                    <img src="assets/images/blog-portrait.jpg" alt="Exploring New Textures" style="width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 6px; margin-bottom: 20px;">
+                    <h3 style="font-size: 1.8em; color: #34495e; margin-bottom: 10px;"><a href="blog-post-1.html" style="color: inherit; text-decoration: none;">Exploring New Textures in My Latest Series</a></h3>
+                    <p style="font-size: 0.9em; color: #777; margin-bottom: 15px;">Published on <time datetime="2024-05-25">25 May 2024</time></p>
+                    <p style="color: #333; line-height: 1.6; margin-bottom: 20px;">
+                        Dive into the inspiration and techniques behind my newest collection of abstract paintings. I've been experimenting with various materials... 
+                        </p>
+                    <a href="blog-post-1.html" class="btn btn-view-hero" style="margin-right: 10px; background-color: #5cb85c; border-color: #4cae4c; color:white;">Read This Post</a>
+                    <a href="blog.html" class="btn btn-secondary">Visit Blog Page</a>
+                </div>
+            </div>
+        </section>
+        </main>
 
     <footer class="site-footer-columns">
         <div class="container footer-columns-container">
             <div class="footer-column">
                 <h3>THE ARTIST</h3>
-                <p>A brief introduction to the artist. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="index.html#artist-bio" class="footer-link">Read More ></a>
+                <p>A brief introduction to the artist. Explore more about their journey and inspiration.</p>
+                <a href="artist.html" class="footer-link">Read More ></a>
             </div>
             <div class="footer-column">
                 <h3>CONNECT</h3>
                 <ul class="social-media-links">
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/carolinehill3482/" target="_blank" rel="noopener noreferrer">Instagram</a></li> 
                     <li><a href="mailto:email@example.com">Email Artist</a></li>
                 </ul>
             </div>
@@ -99,7 +132,7 @@
         </div>
         <div class="site-footer-bottom">
             <div class="container">
-                <p>&copy; <span id="currentYear"></span> Artist Name. All Rights Reserved.</p>
+                <p>&copy; <span id="currentYear"></span> Caroline J Hill. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -110,11 +143,28 @@
         // Hero Slider JavaScript
         const slides = document.querySelectorAll('.hero-section .hero-slide');
         const dotsContainer = document.querySelector('.hero-slider-dots');
+        const heroSlideTitleElement = document.getElementById('heroSlideTitle');
+        // const heroSlideDescriptionElement = document.getElementById('heroSlideDescription'); // Removed
+        const heroSlideLinkElement = document.getElementById('heroSlideLink');
+
         let currentSlide = 0;
-        const slideInterval = 8000; // 4 seconds
+        const slideInterval = 4000; // 4 seconds
+
+        function updateSlideText(slideIndex) {
+            if (!slides[slideIndex]) return; 
+
+            const activeSlide = slides[slideIndex];
+            const title = activeSlide.dataset.title || "Artwork Title"; 
+            // const description = activeSlide.dataset.description || "Details about this piece."; // Removed
+            const link = activeSlide.dataset.link || "#"; 
+
+            if (heroSlideTitleElement) heroSlideTitleElement.textContent = title;
+            // if (heroSlideDescriptionElement) heroSlideDescriptionElement.textContent = description; // Removed
+            if (heroSlideLinkElement) heroSlideLinkElement.href = link;
+        }
 
         function createDots() {
-            if (!dotsContainer) return;
+            if (!dotsContainer || slides.length <= 1) return;
             slides.forEach((slide, index) => {
                 const dot = document.createElement('span');
                 dot.classList.add('dot');
@@ -136,9 +186,11 @@
         }
 
         function goToSlide(slideIndex) {
+            if (!slides[currentSlide]) return; 
             slides[currentSlide].classList.remove('active');
-            currentSlide = (slideIndex + slides.length) % slides.length; // Loop through slides
+            currentSlide = (slideIndex + slides.length) % slides.length; 
             slides[currentSlide].classList.add('active');
+            updateSlideText(currentSlide); 
             updateDots();
         }
 
@@ -149,14 +201,21 @@
         let heroSliderInterval;
 
         function startInterval() {
-            heroSliderInterval = setInterval(nextSlide, slideInterval);
+            if (slides.length > 1) {
+                 heroSliderInterval = setInterval(nextSlide, slideInterval);
+            }
         }
 
         function resetInterval() {
-            clearInterval(heroSliderInterval);
-            startInterval();
+            if (slides.length > 1) {
+                clearInterval(heroSliderInterval);
+                startInterval();
+            }
         }
         
+        if (slides.length > 0) { 
+            updateSlideText(0);
+        }
         if (slides.length > 1) {
             createDots();
             startInterval();
