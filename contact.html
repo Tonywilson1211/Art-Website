@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Artist Name</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to contact page, can be moved to style.css */
+        .contact-form-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .contact-form div {
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            font-family: 'Lato', sans-serif; /* Ensure form fields use the body font */
+        }
+         .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: #3498db; /* Highlight focus */
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-alternatives {
+            margin-top: 40px;
+        }
+        .contact-alternatives h3 {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .contact-alternatives p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .contact-alternatives .social-link { /* Reusing class from main style.css if available, or define here */
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-alternatives .social-link:hover {
+            text-decoration: underline;
+        }
+        .social-media-links-contactpage { /* Specific class if needed */
+            margin-top: 10px;
+        }
+        .social-media-links-contactpage a {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="site-branding">
+                <h1 class="site-title"><a href="index.html" style="color: #fff; text-decoration: none;">ARTIST NAME</a></h1>
+                <p class="site-tagline">Subtitle or Speciality</p>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="artist.html">Artist</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section" style="background-color: #f0f2f5; padding: 40px 0; text-align: center;">
+            <div class="container">
+                <h2 style="color: #2c3e50; font-size: 2.5em;">Get In Touch</h2>
+            </div>
+        </section>
+
+        <section class="contact-page-section" style="padding: 50px 0;">
+            <div class="container">
+                <div class="contact-form-container">
+                    <p class="text-center" style="margin-bottom: 30px; font-size: 1.1em; color: #444;">
+                        I'd love to hear from you! Whether you have a question about my work, are interested in a commission, or just want to say hello, please feel free to reach out using the form below or via the contact details provided.
+                    </p>
+
+                    <form action="#" method="POST" class="contact-form"> <div>
+                            <label for="name">Full Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+
+                        <div>
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+
+                        <div>
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject">
+                        </div>
+
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-secondary" style="padding: 12px 30px; font-size: 1em;">Send Message</button>
+                        </div>
+                    </form>
+                    <p style="font-size: 0.9em; text-align: center; margin-top: 20px; color: #777;">
+                        Note: For this form to actually send emails, it needs to be connected to a backend service (e.g., Formspree, Netlify Forms, or a custom backend).
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-columns">
+        <div class="container footer-columns-container">
+            <div class="footer-column">
+                <h3>THE ARTIST</h3>
+                <p>A brief introduction to the artist. Explore more about their journey and inspiration.</p>
+                <a href="artist.html" class="footer-link">Read More ></a>
+            </div>
+            <div class="footer-column">
+                <h3>CONNECT</h3>
+                 <ul class="social-media-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="mailto:email@example.com">Email Artist</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>JOIN MY MAILING LIST</h3>
+                <form class="mailing-list-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-subscribe">Subscribe ></button>
+                </form>
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> Artist Name. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

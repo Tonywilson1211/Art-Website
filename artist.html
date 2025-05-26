@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Artist - Artist Name</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="site-branding">
+                <h1 class="site-title"><a href="index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1>
+                <p class="site-tagline">Sketching daily</p>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="artist.html" class="active">Artist</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section" style="background-color: #f0f2f5; padding: 40px 0; text-align: center;">
+            <div class="container">
+                <h2 style="color: #2c3e50; font-size: 2.5em;">About The Artist</h2>
+            </div>
+        </section>
+
+        <section class="artist-bio-full-page" style="padding: 50px 0;">
+            <div class="container">
+                <div class="artist-content-wrapper" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+                    <div class="artist-image-column" style="flex: 1; min-width: 280px;">
+                        <img src="assets/images/artist.jpg" alt="[Artist Name]" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        </div>
+                    <div class="artist-text-column" style="flex: 2; min-width: 300px;">
+                        <h3 style="font-size: 1.8em; color: #2c3e50; margin-bottom: 20px;">Meet Caroline</h3>
+                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                            Welcome! I'm Caroline, a passionate visual artist based in Guildford, England. My work explores mixed media, e.g., nature, human connection, abstract forms] through [mention your primary medium, e.g., oil painting, digital art, sculpture].
+                        </p>
+                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                            Since [Year you started seriously], I've been dedicated to capturing the beauty and complexity of the world around us. My artistic journey has been one of constant exploration and growth, driven by a desire to evoke emotion and spark conversation. I believe art has the power to [mention your belief about art, e.g., heal, inspire, challenge perceptions]. Each piece I create is a reflection of my experiences, thoughts, and the stories I wish to tell.
+                        </p>
+                        <h4 style="font-size: 1.4em; color: #34495e; margin-top: 30px; margin-bottom: 15px;">My Inspiration</h4>
+                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                            [Talk about what inspires the artist. This could be nature, travel, personal experiences, other artists, specific movements, etc. Make it engaging and personal.]
+                        </p>
+                        <h4 style="font-size: 1.4em; color: #34495e; margin-top: 30px; margin-bottom: 15px;">Technique & Process</h4>
+                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                            [Describe the artist's unique techniques, preferred materials, and a little about their creative process. What makes their work unique from a technical standpoint?]
+                        </p>
+                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                            Thank you for visiting, and I hope you connect with my work. You can often find me [mention a hobby or typical activity, e.g., sketching in local parks, experimenting with new materials in my studio, visiting galleries for inspiration].
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-columns">
+        <div class="container footer-columns-container">
+            <div class="footer-column">
+                <h3>THE ARTIST</h3>
+                <p>A brief introduction to the artist. Explore more about their journey and inspiration.</p>
+                <a href="artist.html" class="footer-link">Read More ></a>
+            </div>
+            <div class="footer-column">
+                <h3>CONNECT</h3>
+                <ul class="social-media-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="mailto:email@example.com">Email Artist</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>JOIN MY MAILING LIST</h3>
+                <form class="mailing-list-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-subscribe">Subscribe ></button>
+                </form>
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> Artist Name. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

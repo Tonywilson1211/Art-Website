@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Artist Name</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles for portfolio page - can be moved to style.css */
+        .category-section {
+            margin-bottom: 40px;
+        }
+        .category-section h3 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted minmax for images */
+            gap: 25px; /* Increased gap slightly */
+        }
+        .category-link-card {
+            display: block;
+            position: relative; /* Needed for absolute positioning of text overlay */
+            border-radius: 8px;
+            overflow: hidden; /* To keep image corners rounded */
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 180px; /* Set a fixed height for the cards */
+        }
+        .category-link-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .category-link-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the card, might crop */
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .category-link-card:hover img {
+            transform: scale(1.1); /* Slight zoom on image hover */
+        }
+        .category-link-card .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(44, 62, 80, 0.6); /* Dark semi-transparent overlay */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        .category-link-card:hover .card-overlay {
+            background-color: rgba(52, 152, 219, 0.7); /* Brighter overlay on hover */
+        }
+        .category-link-card .card-text {
+            color: #fff;
+            font-size: 1.2em; /* Adjusted font size */
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="site-branding">
+                <h1 class="site-title"><a href="index.html" style="color: #fff; text-decoration: none;">ARTIST NAME</a></h1>
+                <p class="site-tagline">Subtitle or Speciality</p>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="artist.html">Artist</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section" style="background-color: #f0f2f5; padding: 40px 0; text-align: center;">
+            <div class="container">
+                <h2 style="color: #2c3e50; font-size: 2.5em;">Artwork Gallery</h2>
+                <p style="color: #555; font-size: 1.1em; margin-top: 10px;">Explore artwork by medium or topic.</p>
+            </div>
+        </section>
+
+        <section class="gallery-categories-section" style="padding: 50px 0;">
+            <div class="container">
+
+                <div class="category-section">
+                    <h3>Browse by Medium</h3>
+                    <div class="category-grid">
+                        <a href="gallery-medium-charcoal.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/charcoal-thumb.jpg" alt="Charcoal Artwork">
+                            <div class="card-overlay"><span class="card-text">Charcoal</span></div>
+                        </a>
+                        <a href="gallery-medium-coloured-pencils.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/coloured-pencils-thumb.jpg" alt="Coloured Pencils Artwork">
+                            <div class="card-overlay"><span class="card-text">Coloured Pencils</span></div>
+                        </a>
+                        <a href="gallery-medium-graphite.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/graphite-thumb.jpg" alt="Graphite Artwork">
+                            <div class="card-overlay"><span class="card-text">Graphite</span></div>
+                        </a>
+                        <a href="gallery-medium-pastels.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/pastels-thumb.jpg" alt="Pastels Artwork">
+                            <div class="card-overlay"><span class="card-text">Pastels</span></div>
+                        </a>
+                        <a href="gallery-medium-pen-ink.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/pen-ink-thumb.jpg" alt="Pen & Ink Artwork">
+                            <div class="card-overlay"><span class="card-text">Pen & Ink</span></div>
+                        </a>
+                        <a href="gallery-medium-watercolours.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/watercolours-thumb.jpg" alt="Watercolours Artwork">
+                            <div class="card-overlay"><span class="card-text">Watercolours</span></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category-section">
+                    <h3>Browse by Topic</h3>
+                    <div class="category-grid">
+                        <a href="gallery-topic-illustration.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/illustration-thumb.jpg" alt="Illustration & Cartoons">
+                            <div class="card-overlay"><span class="card-text">Illustration & Cartoons</span></div>
+                        </a>
+                        <a href="gallery-topic-mixed-media.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/mixed-media-thumb.jpg" alt="Mixed Media & Collage">
+                            <div class="card-overlay"><span class="card-text">Mixed Media & Collage</span></div>
+                        </a>
+                        <a href="gallery-topic-outdoor.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/outdoor-thumb.jpg" alt="Outdoor Art">
+                            <div class="card-overlay"><span class="card-text">Outdoor Art</span></div>
+                        </a>
+                        <a href="gallery-topic-portraits.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/portraits-thumb.jpg" alt="Portrait & Figures">
+                            <div class="card-overlay"><span class="card-text">Portrait & Figures</span></div>
+                        </a>
+                        <a href="gallery-topic-sketches.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/sketches-thumb.jpg" alt="Quick Sketches">
+                            <div class="card-overlay"><span class="card-text">Quick Sketches</span></div>
+                        </a>
+                        <a href="gallery-topic-training.html" class="category-link-card">
+                            <img src="assets/images/gallery-categories/training-thumb.jpg" alt="Training Artwork">
+                            <div class="card-overlay"><span class="card-text">Training Artwork</span></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-columns">
+        <div class="container footer-columns-container">
+            <div class="footer-column">
+                <h3>THE ARTIST</h3>
+                <p>A brief introduction to the artist. Explore more about their journey and inspiration.</p>
+                <a href="artist.html" class="footer-link">Read More ></a>
+            </div>
+            <div class="footer-column">
+                <h3>CONNECT</h3>
+                <ul class="social-media-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="mailto:email@example.com">Email Artist</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>JOIN MY MAILING LIST</h3>
+                <form class="mailing-list-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-subscribe">Subscribe ></button>
+                </form>
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> Artist Name. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
