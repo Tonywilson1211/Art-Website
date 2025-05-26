@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Name - Art Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="site-branding">
+                <h1 class="site-title">Caroline J Hill</h1>
+                <p class="site-tagline"></p>
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="portfolio.html">Gallery & Prints</a></li>
+                    <li><a href="#commissions">Commissions</a></li> <li><a href="index.html#artist-bio">Artist</a></li>
+                    <li><a href="#news">News</a></li> <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero-section">
+            <div class="hero-slide active" style="background-image: url('assets/images/hero1.jpeg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/images/hero2.jpeg');"></div>
+            <div class="hero-overlay-content container">
+                <div class="hero-main-title">
+                    <h2>MAIN ARTWORK TITLE</h2> <p>Brief description or series name</p>
+                </div>
+                <a href="#" class="btn btn-view-hero">View Details</a>
+            </div>
+            <div class="hero-main-text-overlay">
+                <h1>Showcase of Fine Art</h1>
+                <p>by Your Artist Name</p>
+            </div>
+            <div class="hero-slider-dots">
+                </div>
+        </section>
+
+        <section class="featured-images-grid">
+            <div class="container grid-container">
+                <div class="grid-item">
+                    <img src="assets/images/snowboarder1.jpeg" alt="Featured Artwork 1">
+                </div>
+                <div class="grid-item">
+                    <img src="assets/images/lamb1.jpeg" alt="Featured Artwork 2">
+                </div>
+                <div class="grid-item">
+                    <img src="assets/images/dog1.jpeg" alt="Featured Artwork 3">
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-gallery-section">
+            <div class="container text-center">
+                <h2>GALLERY & PRINTS</h2>
+                <a href="portfolio.html" class="btn btn-secondary">View Gallery ></a>
+            </div>
+        </section>
+
+        <section id="artist-bio" class="artist-bio-section">
+            <div class="container">
+                <h2 class="section-title">About The Artist</h2>
+                <p>Detailed artist biography will go here. This section is linked from the 'Artist' navigation item. Customize this content with the artist's story, inspiration, and background.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-columns">
+        <div class="container footer-columns-container">
+            <div class="footer-column">
+                <h3>THE ARTIST</h3>
+                <p>A brief introduction to the artist. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="index.html#artist-bio" class="footer-link">Read More ></a>
+            </div>
+            <div class="footer-column">
+                <h3>CONNECT</h3>
+                <ul class="social-media-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="mailto:email@example.com">Email Artist</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>JOIN MY MAILING LIST</h3>
+                <form class="mailing-list-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-subscribe">Subscribe ></button>
+                </form>
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> Artist Name. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Hero Slider JavaScript
+        const slides = document.querySelectorAll('.hero-section .hero-slide');
+        const dotsContainer = document.querySelector('.hero-slider-dots');
+        let currentSlide = 0;
+        const slideInterval = 4000; // 4 seconds
+
+        function createDots() {
+            if (!dotsContainer) return;
+            slides.forEach((slide, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    resetInterval();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateDots() {
+            if (!dotsContainer) return;
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(slideIndex) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (slideIndex + slides.length) % slides.length; // Loop through slides
+            slides[currentSlide].classList.add('active');
+            updateDots();
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        let heroSliderInterval;
+
+        function startInterval() {
+            heroSliderInterval = setInterval(nextSlide, slideInterval);
+        }
+
+        function resetInterval() {
+            clearInterval(heroSliderInterval);
+            startInterval();
+        }
+        
+        if (slides.length > 1) {
+            createDots();
+            startInterval();
+        }
+
+    </script>
+
+</body>
+</html>
