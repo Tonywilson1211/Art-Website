@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-GB"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist - Caroline J Hill</title>
     <link rel="stylesheet" href="assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles specific to artist page, can be moved to style.css if preferred */
+        .page-title-section { /* Re-adding this style for consistency if it was removed */
+            background-color: #f0f2f5; 
+            padding: 40px 0; 
+            text-align: center;
+        }
+        .page-title-section h2 {  /* Re-adding this style for consistency */
+            color: #2c3e50; 
+            font-size: 2.5em;
+        }
+        .artist-bio-full-page {
+            padding: 50px 0;
+        }
+        .artist-content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .artist-image-column {
+            flex: 1;
+            min-width: 280px;
+        }
+        .artist-image-column img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .artist-text-column {
+            flex: 2;
+            min-width: 300px;
+        }
+        .artist-text-column h3 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .artist-text-column p {
+            margin-bottom: 1.5em;
+            line-height: 1.7;
+            color: #333;
+        }
+        .artist-text-column h4 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,6 +65,11 @@
                 <h1 class="site-title"><a href="index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1>
                 <p class="site-tagline">Sketching daily</p>
             </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <nav class="main-navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -28,39 +83,39 @@
     </header>
 
     <main>
-        <section class="page-title-section" style="background-color: #f0f2f5; padding: 40px 0; text-align: center;">
+        <section class="page-title-section">
             <div class="container">
-                <h2 style="color: #2c3e50; font-size: 2.5em;">About The Artist</h2>
+                <h2>About The Artist</h2>
             </div>
         </section>
 
-        <section class="artist-bio-full-page" style="padding: 50px 0;">
+        <section class="artist-bio-full-page">
             <div class="container">
-                <div class="artist-content-wrapper" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
-                    <div class="artist-image-column" style="flex: 1; min-width: 280px;">
-                        <img src="assets/images/artist.jpg" alt="[Artist Name]" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        </div>
-                    <div class="artist-text-column" style="flex: 2; min-width: 300px;">
-                        <h3 style="font-size: 1.8em; color: #2c3e50; margin-bottom: 20px;">Meet Caroline</h3>
-                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                <div class="artist-content-wrapper">
+                    <div class="artist-image-column">
+                        <img src="assets/images/artist.jpg" alt="Photo of Caroline J Hill">
+                    </div>
+                    <div class="artist-text-column">
+                        <h3>Meet Caroline</h3>
+                        <p>
                             Welcome! I'm Caroline, a passionate visual artist based in Guildford, England, working primarily in watercolour and ink — also known as line and wash. I love this expressive, spontaneous medium for the way it captures both detail and emotion with simplicity and charm. 
                         </p>
-                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                        <p>
                             Although I’ve been doodling for as long as I can remember, I began painting seriously in 2017 after retiring — and I haven’t looked back since. My art is rooted in everyday life: sketching whenever and wherever I can, though most often from photographs in my cosy home studio. I’m drawn to the small details that often go unnoticed — a cluttered windowsill, the curve of a kettle, wheelie bins, traffic cones, or a tangle of telegraph wires. These humble, sometimes overlooked elements are what give our surroundings personality, and I love weaving them into my work.
                         </p>
-                        <h4 style="font-size: 1.4em; color: #34495e; margin-top: 30px; margin-bottom: 15px;">My Inspiration</h4>
-                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                        <h4>My Inspiration</h4>
+                        <p>
                             I’m continually inspired by artists such as Koosje Koene, Róisín Curé, Liz Steel, Liz Chaderton, and Phil Davies — creatives who celebrate the sketchbook as both an art form and a storytelling tool. Increasingly, I find joy in sketchbook journaling: capturing moments from my day, recording fleeting thoughts, and telling visual stories through drawings. There’s something deeply satisfying about making art that’s personal, imperfect, and full of life.
                         </p>
-                        <h4 style="font-size: 1.4em; color: #34495e; margin-top: 30px; margin-bottom: 15px;">Technique & Process</h4>
-                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                        <h4>Technique & Process</h4>
+                        <p>
                             My approach is relaxed, observational, and playful. I use a fine ink line to sketch what I see, then bring it to life with expressive watercolour washes. I favour loose, fluid lines and a touch of humour, embracing the quirks and wonkiness that make a sketch feel real. The goal isn’t perfection — it’s connection, joy, and honesty.
                         </p>
-                        <h4 style="font-size: 1.4em; color: #34495e; margin-top: 30px; margin-bottom: 15px;">Creative Community</h4>
-                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                        <h4>Creative Community</h4>
+                        <p>
                             More than anything, I’m passionate about encouraging others to pick up a pen and give drawing a try. I believe creativity is for everyone — not just professional artists — and I do my very best to support and inspire fellow creatives, whether they’re just starting out or picking up a sketchbook after years away. If my work makes you smile, think, or feel inspired to draw your own world, then I’ve done what I set out to do.
                         </p>
-                        <p style="margin-bottom: 1.5em; line-height: 1.7; color: #333;">
+                        <p>
                             Thank you for visiting! You’ll often find me sketching on the go, photographing quirky scenes, or experimenting with new materials at my desk. I’d love to connect with fellow artists, sketchers, and curious creatives — so don’t be shy, say hello!
                         </p>
                     </div>
@@ -100,6 +155,18 @@
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle JavaScript
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-navigation');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('nav-open');
+                const isExpanded = mainNav.classList.contains('nav-open');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
     </script>
 
 </body>

@@ -15,6 +15,11 @@
                 <h1 class="site-title"><a href="index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1>
                 <p class="site-tagline">Sketching daily</p> 
             </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <nav class="main-navigation">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -140,29 +145,23 @@
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Hero Slider JavaScript
+        // Hero Slider JavaScript (existing)
         const slides = document.querySelectorAll('.hero-section .hero-slide');
         const dotsContainer = document.querySelector('.hero-slider-dots');
         const heroSlideTitleElement = document.getElementById('heroSlideTitle');
-        // const heroSlideDescriptionElement = document.getElementById('heroSlideDescription'); // Removed
         const heroSlideLinkElement = document.getElementById('heroSlideLink');
 
         let currentSlide = 0;
-        const slideInterval = 4000; // 4 seconds
+        const slideInterval = 4000; 
 
         function updateSlideText(slideIndex) {
             if (!slides[slideIndex]) return; 
-
             const activeSlide = slides[slideIndex];
             const title = activeSlide.dataset.title || "Artwork Title"; 
-            // const description = activeSlide.dataset.description || "Details about this piece."; // Removed
             const link = activeSlide.dataset.link || "#"; 
-
             if (heroSlideTitleElement) heroSlideTitleElement.textContent = title;
-            // if (heroSlideDescriptionElement) heroSlideDescriptionElement.textContent = description; // Removed
             if (heroSlideLinkElement) heroSlideLinkElement.href = link;
         }
-
         function createDots() {
             if (!dotsContainer || slides.length <= 1) return;
             slides.forEach((slide, index) => {
@@ -176,7 +175,6 @@
                 dotsContainer.appendChild(dot);
             });
         }
-
         function updateDots() {
             if (!dotsContainer) return;
             const dots = dotsContainer.querySelectorAll('.dot');
@@ -184,7 +182,6 @@
                 dot.classList.toggle('active', index === currentSlide);
             });
         }
-
         function goToSlide(slideIndex) {
             if (!slides[currentSlide]) return; 
             slides[currentSlide].classList.remove('active');
@@ -193,26 +190,21 @@
             updateSlideText(currentSlide); 
             updateDots();
         }
-
         function nextSlide() {
             goToSlide(currentSlide + 1);
         }
-
         let heroSliderInterval;
-
         function startInterval() {
             if (slides.length > 1) {
                  heroSliderInterval = setInterval(nextSlide, slideInterval);
             }
         }
-
         function resetInterval() {
             if (slides.length > 1) {
                 clearInterval(heroSliderInterval);
                 startInterval();
             }
         }
-        
         if (slides.length > 0) { 
             updateSlideText(0);
         }
@@ -221,6 +213,17 @@
             startInterval();
         }
 
+        // Mobile Navigation Toggle JavaScript (Newly Added)
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-navigation');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('nav-open');
+                const isExpanded = mainNav.classList.contains('nav-open');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
     </script>
 
 </body>

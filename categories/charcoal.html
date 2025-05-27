@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/style.css"> <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Styles for category artwork grid - can be moved to style.css */
+        /* These styles are assumed to be in assets/style.css or can be copied there */
         .artwork-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for artworks */
@@ -56,6 +57,16 @@
         .back-to-gallery-link:hover {
             text-decoration: underline;
         }
+         /* Styles for page title section if not in main CSS */
+        .page-title-section { 
+            background-color: #f0f2f5; 
+            padding: 40px 0; 
+            text-align: center;
+        }
+        .page-title-section h2 {  
+            color: #2c3e50; 
+            font-size: 2.5em;
+        }
     </style>
 </head>
 <body>
@@ -63,49 +74,66 @@
     <header class="site-header">
         <div class="container header-container">
             <div class="site-branding">
-                <h1 class="site-title"><a href="../index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1> <p class="site-tagline">Sketching daily</p>
+                <h1 class="site-title"><a href="../index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1>
+                <p class="site-tagline">Sketching daily</p>
             </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <nav class="main-navigation">
                 <ul>
-                    <li><a href="../index.html">Home</a></li> <li><a href="../gallery.html" class="active">Gallery</a></li> <li><a href="../artist.html">Artist</a></li> <li><a href="../blog.html">Blog</a></li> <li><a href="../contact.html">Contact</a></li> </ul>
+                    <li><a href="../index.html">Home</a></li> 
+                    <li><a href="../gallery.html" class="active">Gallery</a></li> 
+                    <li><a href="../artist.html">Artist</a></li> 
+                    <li><a href="../blog.html">Blog</a></li> 
+                    <li><a href="../contact.html">Contact</a></li> 
+                </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="page-title-section" style="background-color: #f0f2f5; padding: 40px 0; text-align: center;">
+        <section class="page-title-section">
             <div class="container">
-                <h2 style="color: #2c3e50; font-size: 2.5em;">Charcoal Artwork</h2> <p style="color: #555; font-size: 1.1em; margin-top: 10px;">A collection of pieces created using charcoal.</p> </div>
+                <h2>Charcoal Artwork</h2> 
+                <p style="color: #555; font-size: 1.1em; margin-top: 10px;">A collection of expressive pieces created using charcoal.</p> 
+            </div>
         </section>
 
         <section class="category-artwork-section" style="padding: 50px 0;">
             <div class="container">
-                <a href="../gallery.html" class="back-to-gallery-link">&larr; Back to Main Gallery</a> <div class="artwork-grid">
+                <a href="../gallery.html" class="back-to-gallery-link">&larr; Back to Main Gallery</a> 
+
+                <div class="artwork-grid">
                     <div class="artwork-item">
-                        <a href="path-to-larger-image-or-artwork-detail-page1.html"> <img src="../assets/images/artwork/charcoal/charcoal-piece-1.jpg" alt="Artwork Title 1">
+                        <a href="#"> 
+                            <img src="../assets/images/artwork/charcoal/charcoal-piece-1.jpg" alt="Charcoal Drawing 1">
                             </a>
                         <div class="artwork-info">
-                            <h4>Artwork Title 1</h4>
-                            <p>Charcoal on Paper, 2023</p> </div>
-                    </div>
-
-                    <div class="artwork-item">
-                        <a href="path-to-larger-image-or-artwork-detail-page2.html">
-                            <img src="../assets/images/artwork/charcoal/charcoal-piece-2.jpg" alt="Artwork Title 2">
-                        </a>
-                        <div class="artwork-info">
-                            <h4>Artwork Title 2</h4>
-                            <p>Willow Charcoal, 18x24"</p>
+                            <h4>Monochromatic Mood</h4>
+                            <p>Willow Charcoal on Textured Paper, 2023</p> 
                         </div>
                     </div>
 
                     <div class="artwork-item">
-                        <a href="path-to-larger-image-or-artwork-detail-page3.html">
-                            <img src="../assets/images/artwork/charcoal/charcoal-piece-3.jpg" alt="Artwork Title 3">
+                        <a href="#">
+                            <img src="../assets/images/artwork/charcoal/charcoal-piece-2.jpg" alt="Charcoal Study 2">
                         </a>
                         <div class="artwork-info">
-                            <h4>Artwork Title 3</h4>
-                            <p>Compressed Charcoal Study</p>
+                            <h4>Portrait in Shadows</h4>
+                            <p>Compressed Charcoal and White Pastel</p>
+                        </div>
+                    </div>
+
+                    <div class="artwork-item">
+                        <a href="#">
+                            <img src="../assets/images/artwork/charcoal/charcoal-piece-3.jpg" alt="Abstract Charcoal 3">
+                        </a>
+                        <div class="artwork-info">
+                            <h4>Abstract Flow</h4>
+                            <p>Charcoal Powder and Eraser</p>
                         </div>
                     </div>
 
@@ -119,12 +147,13 @@
             <div class="footer-column">
                 <h3>THE ARTIST</h3>
                 <p>A brief introduction to the artist. Explore more about their journey and inspiration.</p>
-                <a href="../artist.html" class="footer-link">Read More ></a> </div>
+                <a href="../artist.html" class="footer-link">Read More ></a> 
+            </div>
             <div class="footer-column">
                 <h3>CONNECT</h3>
                 <ul class="social-media-links">
                     <li><a href="https://www.instagram.com/carolinehill3482/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    <li><a href="contact.html">Email Artist</a></li>
+                    <li><a href="../contact.html">Email Artist</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -144,6 +173,18 @@
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle JavaScript
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-navigation');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('nav-open');
+                const isExpanded = mainNav.classList.contains('nav-open');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
     </script>
 
 </body>

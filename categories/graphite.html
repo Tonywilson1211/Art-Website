@@ -57,6 +57,16 @@
         .back-to-gallery-link:hover {
             text-decoration: underline;
         }
+         /* Styles for page title section if not in main CSS */
+        .page-title-section { 
+            background-color: #f0f2f5; 
+            padding: 40px 0; 
+            text-align: center;
+        }
+        .page-title-section h2 {  
+            color: #2c3e50; 
+            font-size: 2.5em;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +77,11 @@
                 <h1 class="site-title"><a href="../index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1>
                 <p class="site-tagline">Sketching daily</p>
             </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <nav class="main-navigation">
                 <ul>
                     <li><a href="../index.html">Home</a></li> 
@@ -80,20 +95,21 @@
     </header>
 
     <main>
-        <section class="page-title-section" style="background-color: #f0f2f5; padding: 40px 0; text-align: center;">
+        <section class="page-title-section">
             <div class="container">
-                <h2 style="color: #2c3e50; font-size: 2.5em;">Graphite Artwork</h2>
-                <p style="color: #555; font-size: 1.1em; margin-top: 10px;">A collection of detailed pieces created using graphite pencils.</p>
+                <h2>Graphite Artwork</h2> 
+                <p style="color: #555; font-size: 1.1em; margin-top: 10px;">A collection of detailed pieces created using graphite pencils.</p> 
             </div>
         </section>
 
         <section class="category-artwork-section" style="padding: 50px 0;">
             <div class="container">
-                <a href="../gallery.html" class="back-to-gallery-link">&larr; Back to Main Gallery</a>
+                <a href="../gallery.html" class="back-to-gallery-link">&larr; Back to Main Gallery</a> 
 
                 <div class="artwork-grid">
                     <div class="artwork-item">
-                        <a href="#"> <img src="../assets/images/artwork/graphite/graphite-artwork-1.jpg" alt="Graphite Sketch 1">
+                        <a href="#"> 
+                            <img src="../assets/images/artwork/graphite/graphite-artwork-1.jpg" alt="Graphite Sketch 1">
                             </a>
                         <div class="artwork-info">
                             <h4>Portrait Study</h4>
@@ -121,18 +137,7 @@
                         </div>
                     </div>
                     
-                    <!-- Example:
-                    <div class="artwork-item">
-                        <a href="#">
-                            <img src="../assets/images/artwork/graphite/graphite-artwork-4.jpg" alt="Graphite Artwork 4">
-                        </a>
-                        <div class="artwork-info">
-                            <h4>Artwork Title 4</h4>
-                            <p>Details...</p>
-                        </div>
                     </div>
-                    -->
-                </div>
             </div>
         </section>
     </main>
@@ -142,13 +147,13 @@
             <div class="footer-column">
                 <h3>THE ARTIST</h3>
                 <p>A brief introduction to the artist. Explore more about their journey and inspiration.</p>
-                <a href="../artist.html" class="footer-link">Read More ></a>
+                <a href="../artist.html" class="footer-link">Read More ></a> 
             </div>
             <div class="footer-column">
                 <h3>CONNECT</h3>
                 <ul class="social-media-links">
                     <li><a href="https://www.instagram.com/carolinehill3482/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    <li><a href="mailto:email@example.com">Email Artist</a></li>
+                    <li><a href="../contact.html">Email Artist</a></li> 
                 </ul>
             </div>
             <div class="footer-column">
@@ -168,6 +173,18 @@
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle JavaScript
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-navigation');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('nav-open');
+                const isExpanded = mainNav.classList.contains('nav-open');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
     </script>
 
 </body>

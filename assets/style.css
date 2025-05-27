@@ -500,4 +500,63 @@ img {
     .mailing-list-form input[type="email"] {
         max-width: 250px; 
     }
+    /* Mobile Navigation Toggle Styles - Add to assets/style.css */
+.mobile-nav-toggle {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    color: #fff; /* Hamburger icon color */
+    font-size: 24px; /* Size of the hamburger icon */
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100; 
+}
+.mobile-nav-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Adjustments for header when mobile nav is potentially active - Add to assets/style.css */
+@media (max-width: 768px) {
+    .site-header .header-container { /* Ensure this targets the container within site-header */
+        justify-content: space-between; 
+    }
+
+    .main-navigation ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below the header element it's part of */
+        left: 0;
+        width: 100%;
+        background-color: #34495e; /* Background for mobile menu dropdown */
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000; /* Ensure it's above content below header */
+    }
+    .main-navigation.nav-open ul {
+        display: flex; 
+    }
+    .main-navigation li {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .main-navigation a {
+        display: block;
+        padding: 12px 15px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1); 
+    }
+    .main-navigation li:last-child a {
+        border-bottom: none;
+    }
+    .mobile-nav-toggle {
+        display: block; 
+    }
+}
 }
