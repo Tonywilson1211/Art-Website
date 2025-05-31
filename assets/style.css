@@ -330,8 +330,10 @@ img {
     color: #444;
     max-width: 800px;
     margin: 0 auto 20px auto;
-    text-align: justify;
+    text-align: center;
 }
+
+
 
 
 /* Footer Columns */
