@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork Title - Caroline J Hill</title> 
+    <link rel="stylesheet" href="/assets/style.css"> <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+     <style>
+        /* Styles for single artwork page - MOVE TO assets/style.css */
+        .artwork-detail-section {
+            padding: 40px 0;
+        }
+        .artwork-image-container {
+            text-align: center; /* Center the image if it's narrower than its container */
+            margin-bottom: 30px;
+            position: relative; /* For potential future controls like zoom icon */
+        }
+        .artwork-main-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 70vh; /* Limit initial display height */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            display: inline-block; /* Allows centering with text-align on parent */
+        }
+        .artwork-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .artwork-title-single {
+            font-size: 2.5em; /* Larger title for the artwork */
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .artwork-meta-single {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .artwork-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+        }
+        .artwork-description p {
+            margin-bottom: 1.5em;
+        }
+        .back-to-category-link { /* Link to go back to the category page */
+            display: inline-block;
+            margin-top: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-to-category-link:hover {
+            text-decoration: underline;
+        }
+
+         /* Styles for page title section if not in main CSS */
+        .page-title-section { 
+            background-color: #f0f2f5; 
+            padding: 40px 0; 
+            text-align: center;
+        }
+        .page-title-section h2 {  
+            color: #2c3e50; 
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="site-branding">
+                <h1 class="site-title"><a href="../index.html" style="color: #fff; text-decoration: none;">Caroline J Hill</a></h1>
+                <p class="site-tagline">Sketching daily</p>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li> 
+                    <li><a href="../gallery.html" class="active">Gallery</a></li>
+                    <li><a href="../artist.html">Artist</a></li> 
+                    <li><a href="../blog.html">Blog</a></li> 
+                    <li><a href="../contact.html">Contact</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="artwork-detail-section">
+            <div class="container">
+                <div class="artwork-image-container">
+                    <img src="/assets/images/charcoal/IMG_2251.JPEG" alt="Artwork Title - Detailed View" class="artwork-main-image" id="mainArtworkImage">
+                    </div>
+
+                <header class="artwork-header">
+                    <h1 class="artwork-title-single">Eagle</h1> <p class="artwork-meta-single">
+                        Willow Charcoal, one thin and one thick stick | Carbon pencil | Drawing paper - A4   | Blending stump   | Kneaded eraser |
+                        Pencil eraser | Craft knife and sanding block or small piece of sandpaper
+                        </p>
+                </header>
+
+                <div class="artwork-description">
+                    <p>
+                       
+                    </p>
+                    <p>
+                        
+                    </p>
+                    </div>
+
+                <div style="text-align: center;"> <a href="/categories/charcoal.html" class="back-to-category-link">&larr; Back to Charcoal Artwork</a>
+                    </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer-columns">
+        <div class="container footer-columns-container">
+            <div class="footer-column">
+                <h3>THE ARTIST</h3>
+                <p>A brief introduction to the artist. Explore more about their journey and inspiration.</p>
+                <a href="../artist.html" class="footer-link">Read More ></a> 
+            </div>
+            <div class="footer-column">
+                <h3>CONNECT</h3>
+                <ul class="social-media-links">
+                    <li><a href="https://www.instagram.com/carolinehill3482/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="../contact.html">Email Artist</a></li> 
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>JOIN MY MAILING LIST</h3>
+                <form class="mailing-list-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-subscribe">Subscribe ></button>
+                </form>
+            </div>
+        </div>
+        <div class="site-footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> Caroline J Hill. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle JavaScript
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const mainNav = document.querySelector('.main-navigation');
+
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('nav-open');
+                const isExpanded = mainNav.classList.contains('nav-open');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+
+        // Lightbox JavaScript
+        const mainArtworkImage = document.getElementById('mainArtworkImage');
+        const lightboxOverlay = document.getElementById('lightboxOverlay');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        if (mainArtworkImage && lightboxOverlay && lightboxImage && lightboxClose) {
+            mainArtworkImage.addEventListener('click', () => {
+                lightboxImage.src = mainArtworkImage.src; // Set the source for the lightbox image
+                lightboxImage.alt = mainArtworkImage.alt; // Copy alt text
+                lightboxOverlay.classList.add('active');
+            });
+
+            lightboxClose.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                lightboxOverlay.classList.remove('active');
+            });
+
+            // Optional: Close lightbox when clicking on the overlay background
+            lightboxOverlay.addEventListener('click', (e) => {
+                if (e.target === lightboxOverlay) { // Check if the click is on the overlay itself, not the image
+                    lightboxOverlay.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
